@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', serif;
+  /* border: 1px solid black; --- used for applying css*/
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  height: 100vh;
+  min-width: 100%;
+  max-width: 1440px;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+:root {
+  --white-color: hsl(0, 0%, 100%);
+  --primary-color: hsl(212, 45%, 89%);
+  --secondary-color: hsl(216, 15%, 48%);
+  --tertiary-color: hsl(218, 44%, 22%);
+}
+
+.wrapper,
+.card,
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  max-width: 330px;
+  max-height: 420px;
+}
+
+.card {
+  background-color: var(--white-color);
+  border-radius: 20px;
+  line-height: 1.2;
+  padding-bottom: 1.1rem;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--tertiary-color);
+}
+
+.card p {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.qr-code {
+  width: 90%;
+  height: 300px;
+  background: #000 url(/images/image-qr-code.png) center center/cover no-repeat;
+  border-radius: 10px;
+  margin: 1rem 1rem 0rem 1rem;
+}
+
+.text {
+  gap: 1rem;
+  padding: 1.2rem 2.1rem;
+}
+
+@media (max-width: 375px) {
+  .card {
+    margin: 0.2rem;
+  }
+}
